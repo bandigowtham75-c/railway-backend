@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: railway-backend
+    env: docker
+    plan: free
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: railway-user
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: railway-user
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: railway-user
+          property: password
+
+databases:
+  - name: railway-user
+    plan: free

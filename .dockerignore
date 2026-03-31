@@ -1,0 +1,14 @@
+target/
+.git
+.gitignore
+.metadata/
+.settings/
+.classpath
+.factorypath
+.project
+README.md
+HELP.md
+*.log
+*.iml
+node_modules/
+docker-compose*.yml
