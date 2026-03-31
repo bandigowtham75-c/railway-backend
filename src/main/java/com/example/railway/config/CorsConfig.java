@@ -15,7 +15,7 @@ public class CorsConfig {
 
                 registry.addMapping("/**")
                         .allowedOrigins("https://railway-monitoring-system-frontend.onrender.com")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedMethods("*")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }

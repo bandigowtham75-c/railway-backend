@@ -10,7 +10,7 @@ import com.example.railway.service.TrackService;
 
 @RestController
 @RequestMapping("/api/tracks")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "https://railway-monitoring-system-frontend.onrender.com")
 public class TrackController {
 
     @Autowired
