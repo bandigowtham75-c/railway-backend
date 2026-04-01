@@ -10,7 +10,6 @@ import com.example.railway.service.AlertService;
 
 @RestController
 @RequestMapping("/api/alerts")
-@CrossOrigin(origins = "http://localhost:5173")
 public class AlertController {
 
     @Autowired

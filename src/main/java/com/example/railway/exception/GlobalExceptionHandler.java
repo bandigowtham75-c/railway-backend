@@ -1,12 +1,19 @@
 package com.example.railway.exception;
 
-import org.springframework.web.bind.annotation.*;
+import java.util.Map;
 
-@ControllerAdvice
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public String handleException(Exception ex){
-        return ex.getMessage();
+    public ResponseEntity<Map<String, String>> handleException(Exception ex) {
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(Map.of("error", ex.getMessage() == null ? "Unexpected server error" : ex.getMessage()));
     }
 }

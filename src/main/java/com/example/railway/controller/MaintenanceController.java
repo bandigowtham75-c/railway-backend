@@ -10,7 +10,6 @@ import com.example.railway.repository.MaintenanceRepository;
 
 @RestController
 @RequestMapping("/api/maintenance")
-@CrossOrigin("*")
 public class MaintenanceController {
 
     @Autowired

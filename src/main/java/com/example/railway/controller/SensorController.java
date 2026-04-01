@@ -10,7 +10,6 @@ import com.example.railway.repository.SensorRepository;
 
 @RestController
 @RequestMapping("/api/sensors")
-@CrossOrigin("*")
 public class SensorController {
 
     @Autowired
