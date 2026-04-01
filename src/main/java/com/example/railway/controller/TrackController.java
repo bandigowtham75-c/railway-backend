@@ -9,7 +9,7 @@ import com.example.railway.entity.Track;
 import com.example.railway.service.TrackService;
 
 @RestController
-@RequestMapping("/api/tracks")
+@RequestMapping("/api")
 @CrossOrigin(origins = "https://railway-monitoring-system-frontend.onrender.com")
 public class TrackController {
 
